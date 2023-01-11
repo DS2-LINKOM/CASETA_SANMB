@@ -1,0 +1,2 @@
+rootProject.name = "CASETA_SANMB"
+include ':app'

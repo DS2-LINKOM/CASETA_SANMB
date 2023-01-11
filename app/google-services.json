@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "127656829768",
+    "project_id": "san-mb",
+    "storage_bucket": "san-mb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127656829768:android:e8f92d741276f628e8897d",
+        "android_client_info": {
+          "package_name": "mx.linkom.caseta_sanmb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127656829768-7rvaieiurcgksmncbnmtscfof6dhdrtl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA55nNUf9epYPALQo0TWRk_Xu6KIVjjlk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127656829768-7rvaieiurcgksmncbnmtscfof6dhdrtl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
