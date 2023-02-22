@@ -62,6 +62,7 @@ public class EscaneoTrabajadorActivity extends mx.linkom.caseta_sanmb.Menu {
         Buscar = (Button) findViewById(R.id.btnBuscar);
         Qr = (LinearLayout) findViewById(R.id.qr);
         Qr2 = (LinearLayout) findViewById(R.id.qr2);
+        Lector = (Button) findViewById(R.id.btnLector);
         Buscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
