@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="@color/white"
-    >
-
+    android:orientation="vertical">
 
 
     <ScrollView
@@ -21,9 +19,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:src="@drawable/feb"
                 android:scaleType="fitXY"
-                />
+                android:src="@drawable/feb" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -31,7 +28,7 @@
                 android:orientation="vertical">
 
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -41,21 +38,30 @@
                     <ImageView
                         android:layout_width="44dp"
                         android:layout_height="28dp"
-                        android:src="@drawable/menu"
+                        android:layout_alignParentStart="true"
                         android:onClick="showPopup"
-                        />
+                        android:src="@drawable/menu" />
+
                     <TextView
                         android:id="@+id/nombre"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginLeft="22dp"
+                        android:fontFamily="@font/fontNegritaC"
                         android:text="DashBoard"
                         android:textColor="@color/fontColorBlanco"
-                        android:textSize="15dp"
-                        android:fontFamily="@font/fontNegritaC"
-                        />
+                        android:textSize="15dp" />
 
-                </LinearLayout>
+                    <ImageView
+                        android:id="@+id/iconoInternetDashboard"
+                        android:layout_width="44dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="false"
+                        app:srcCompat="@drawable/ic_offline" />
+
+                </RelativeLayout>
             </LinearLayout>
         </FrameLayout>
     </ScrollView>
@@ -66,8 +72,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:numColumns="1"
-        ></GridView>
+        android:numColumns="1"></GridView>
+
     <GridView
         android:id="@+id/gridList2"
         android:layout_width="match_parent"
@@ -78,267 +84,260 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/rlVistantes"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:orientation="vertical"
-            >
-
             <LinearLayout
+                android:id="@+id/rlVistantes"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:fontFamily="@font/fontNegritaC"
-                    android:text="Visitantes"
-                    android:layout_gravity="center"
-                    android:textAlignment="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp">
 
-                    />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/fontNegritaC"
+                        android:text="Visitantes"
+                        android:textAlignment="center"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Entradas:"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+                    <TextView
+                        android:id="@+id/setEntradas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Salidas:"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+                    <TextView
+                        android:id="@+id/setSalidas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Permancen:"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+                    <TextView
+                        android:id="@+id/setPermanecen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/rlTrabajadores"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:text="Entradas:"
-                    android:layout_gravity="center"
-                    />
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp">
 
-                <TextView
-                    android:id="@+id/setEntradas"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/fontNegritaC"
+                        android:text="Trabajadores"
+                        android:textAlignment="center"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:layout_gravity="center"
-                    />
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp">
 
 
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Entradas:"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+                    <TextView
+                        android:id="@+id/setEntradasT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Salidas:"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+                    <TextView
+                        android:id="@+id/setSalidasT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Permancen:"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+                    <TextView
+                        android:id="@+id/setPermanecenT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize" />
+
+
+                </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp">
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:text="Salidas:"
-                    android:layout_gravity="center"
-                    />
-
-                <TextView
-                    android:id="@+id/setSalidas"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:layout_gravity="center"
-                    />
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp">
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:text="Permancen:"
-                    android:layout_gravity="center"
-                    />
-
-                <TextView
-                    android:id="@+id/setPermanecen"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:layout_gravity="center"
-                    />
-
-
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/rlTrabajadores"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp">
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:fontFamily="@font/fontNegritaC"
-                    android:text="Trabajadores"
-                    android:layout_gravity="center"
-                    android:textAlignment="center"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp">
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:text="Entradas:"
-                    android:layout_gravity="center"
-                    />
-
-                <TextView
-                    android:id="@+id/setEntradasT"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:layout_gravity="center"
-                    />
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp">
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:text="Salidas:"
-                    android:layout_gravity="center"
-                    />
-
-                <TextView
-                    android:id="@+id/setSalidasT"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:layout_gravity="center"
-                    />
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp">
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:text="Permancen:"
-                    android:layout_gravity="center"
-                    />
-
-                <TextView
-                    android:id="@+id/setPermanecenT"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fontSize"
-                    android:textColor="@color/fontColorGris"
-                    android:layout_gravity="center"
-                    />
-
-
-            </LinearLayout>
-        </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
